@@ -1,0 +1,181 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "live": true,
+ "data": {
+  "createdAt": "2025-11-13T12:48:21.179Z",
+  "updatedAt": "2025-11-13T12:53:28.808Z",
+  "isDeleted": false,
+  "testedAt": "2025-11-13T12:53:24.712Z",
+  "publishedAt": "2025-11-13T12:53:28.793Z",
+  "entityId": "3f9b3bb9-a717-4b52-a81b-47f7e223ba8c",
+  "name": "Rule2",
+  "commitId": "commit-8fc4f6ad-47b7-4747-b6e2-597d2f08489c",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Created at 2025-11-13 12:48:21",
+   "description": "v1",
+   "timeStamp": "2025-11-13T12:53:28.791Z"
+  },
+  "customInput": {
+   "Age": {
+    "name": "Age",
+    "dataType": "numeric",
+    "executedValue": 28
+   }
+  },
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+     "isEnabled": true
+    }
+   },
+   "properties": {
+    "rule_03": {
+     "type": "simpleCondition"
+    }
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03"
+  },
+  "action": {
+   "then": {
+    "actionNode": {
+     "actionData_action_1": {
+      "name": "action_1",
+      "connectorId": "",
+      "entity": "rule",
+      "entityId": "3b12f50c-ec37-451b-afb0-495b01ec26b7",
+      "config": {
+       "query": ""
+      },
+      "input": {
+       "name": {
+        "name": "name",
+        "dataType": "string",
+        "source": "systemVar",
+        "attribute": "MatchedResumeValue",
+        "value": "Value"
+       }
+      },
+      "next": "actionData_action_2"
+     },
+     "actionData_action_2": {
+      "name": "action_2",
+      "connectorId": "2467f29b-75ca-49d4-81ea-5393cb6bc85c",
+      "entity": "",
+      "entityId": "",
+      "config": {
+       "method": "GET",
+       "headers": [],
+       "settings": {
+        "cache": {
+         "cacheKeys": "",
+         "enabled": false,
+         "duration": {
+          "unit": "d",
+          "value": 0
+         }
+        }
+       },
+       "queryParams": [],
+       "path": "/posts/2",
+       "query": ""
+      }
+     }
+    },
+    "firstActionNode": "actionData_action_1"
+   },
+   "else": {
+    
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_02": {
+     "value": "",
+     "operator": "any",
+     "dataType": "numeric",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "rule_03"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_03": {
+     "sourceType": "customInput",
+     "dataType": "numeric",
+     "nodeType": "params",
+     "attribute": "Age",
+     "siblingIndex": 1
+    },
+    "rule_01": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "rule_02"
+     ],
+     "siblingIndex": 1
+    }
+   }
+  },
+  "firstCustomInput": "Age",
+  "description": "",
+  "policy": "first",
+  "version": "0.10",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  },
+  "isDemo": false,
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-8fc4f6ad-47b7-4747-b6e2-597d2f08489c",
+   "entityType": "rule",
+   "entityId": "3f9b3bb9-a717-4b52-a81b-47f7e223ba8c",
+   "entityVersion": "0.10",
+   "entityNodeId": "then-actionData_action_2",
+   "dependencyType": "connector",
+   "dependencyId": "2467f29b-75ca-49d4-81ea-5393cb6bc85c",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-13T12:51:47.417895Z",
+   "updatedAt": "2025-11-13T12:53:28.803653Z"
+  },
+  {
+   "entityCommitId": "commit-8fc4f6ad-47b7-4747-b6e2-597d2f08489c",
+   "entityType": "rule",
+   "entityId": "3f9b3bb9-a717-4b52-a81b-47f7e223ba8c",
+   "entityVersion": "0.10",
+   "entityNodeId": "then-actionData_action_1",
+   "dependencyType": "rule",
+   "dependencyId": "3b12f50c-ec37-451b-afb0-495b01ec26b7",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-13T12:50:54.750468Z",
+   "updatedAt": "2025-11-13T12:53:28.803653Z"
+  }
+ ]
+}
