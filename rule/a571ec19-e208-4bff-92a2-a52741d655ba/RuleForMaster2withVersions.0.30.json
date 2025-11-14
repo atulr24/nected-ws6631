@@ -1,15 +1,16 @@
 {
  "entityType": "rule",
  "category": "decisionTable",
+ "live": true,
  "data": {
   "createdAt": "2025-11-14T06:27:05.367Z",
-  "updatedAt": "2025-11-14T06:44:02.97051Z",
+  "updatedAt": "2025-11-14T06:44:02.962Z",
   "isDeleted": false,
   "testedAt": "2025-11-14T06:43:58.87Z",
   "publishedAt": "2025-11-14T06:44:02.951Z",
   "entityId": "a571ec19-e208-4bff-92a2-a52741d655ba",
   "name": "RuleForMaster2withVersions",
-  "commitId": "commit-eadeb673-5b71-408c-9972-2098ef22ed97",
+  "commitId": "commit-b899cf8e-3f0a-4895-ac36-68199404bc8d",
   "status": "published",
   "lastVersion": "draft",
   "isLive": true,
@@ -56,21 +57,6 @@
   },
   "conditions": {
    "nodes": {
-    "rhs_7gCzwp": {
-     "sourceType": "dataSet",
-     "dataType": "string",
-     "nodeType": "params",
-     "attribute": "name",
-     "parent": "rule_02",
-     "siblingIndex": 1
-    },
-    "param_rrsHJE": {
-     "sourceType": "dataSet",
-     "dataType": "string",
-     "nodeType": "params",
-     "attribute": "email",
-     "siblingIndex": 1
-    },
     "rule_01": {
      "operator": "and",
      "nodeType": "group",
@@ -111,6 +97,21 @@
       "param_rrsHJE"
      ],
      "siblingIndex": 1
+    },
+    "rhs_7gCzwp": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "rule_02",
+     "siblingIndex": 1
+    },
+    "param_rrsHJE": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "email",
+     "siblingIndex": 1
     }
    }
   },
@@ -141,5 +142,20 @@
   },
   "isDemo": false,
   "schemaVersion": "0.1.1"
- }
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-b899cf8e-3f0a-4895-ac36-68199404bc8d",
+   "entityType": "rule",
+   "entityId": "a571ec19-e208-4bff-92a2-a52741d655ba",
+   "entityVersion": "0.30",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "c10c8354-db6a-4358-9f5f-42d946365e95",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-14T06:43:48.077245Z",
+   "updatedAt": "2025-11-14T06:44:02.957458Z"
+  }
+ ]
 }
