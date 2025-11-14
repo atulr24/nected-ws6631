@@ -1,0 +1,111 @@
+{
+ "entityType": "dataSet",
+ "category": "dataSet",
+ "live": true,
+ "data": {
+  "createdAt": "2025-11-14T06:28:19.422Z",
+  "updatedAt": "2025-11-14T06:31:32.994Z",
+  "isDeleted": false,
+  "publishedAt": "2025-11-14T06:31:32.977Z",
+  "testedAt": "2025-11-14T06:31:28.916Z",
+  "entityId": "c10c8354-db6a-4358-9f5f-42d946365e95",
+  "name": "Untitled",
+  "commitId": "commit-155ec4ab-6cff-4bd2-9f60-7837fda05c49",
+  "status": "published",
+  "lastVersion": "draft",
+  "isLive": true,
+  "commitInfo": {
+   "title": "Forked from 0.10",
+   "description": "v2",
+   "timeStamp": "2025-11-14T06:31:32.974Z"
+  },
+  "fields": {
+   "movie_id": {
+    "ColumnName": "movie_id",
+    "DataType": "objectid",
+    "Order": 5,
+    "ExecutedValue": "573a1390f29313caabcd4323"
+   },
+   "_id": {
+    "ColumnName": "_id",
+    "DataType": "objectid",
+    "Order": 2,
+    "ExecutedValue": "5a9427648b0beebeb69579e7"
+   },
+   "Bool": {
+    "ColumnName": "Bool",
+    "DataType": "boolean",
+    "Order": 8,
+    "ExecutedValue": false
+   },
+   "date": {
+    "ColumnName": "date",
+    "DataType": "dateTime",
+    "Order": 7,
+    "ExecutedValue": "2002-08-18T04:56:07Z"
+   },
+   "name": {
+    "ColumnName": "name",
+    "DataType": "string",
+    "Order": 3,
+    "ExecutedValue": "email@email.com"
+   },
+   "text": {
+    "ColumnName": "text",
+    "DataType": "json",
+    "Order": 6,
+    "ExecutedValue": {
+     "$cond": {
+      "if": {
+       "$eq": [
+        "$Bool",
+        true
+       ]
+      },
+      "else": "NegativeReview",
+      "then": "PositiveReview"
+     }
+    }
+   },
+   "email": {
+    "ColumnName": "email",
+    "DataType": "string",
+    "Order": 4,
+    "ExecutedValue": "mercedes_tyler@fakegmail.com"
+   },
+   "Integer": {
+    "ColumnName": "Integer",
+    "DataType": "string",
+    "Order": 1,
+    "ExecutedValue": "100"
+   }
+  },
+  "query": "db.comments.find({})",
+  "version": "0.20",
+  "connectorId": "00d3bd9a-b7f2-4962-b349-14abc6ffcfbb",
+  "isDemo": false,
+  "settings": {
+   "durationUnit": "m",
+   "rowLimit": 1000,
+   "durationValue": 5,
+   "cacheEnabled": true,
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  }
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-155ec4ab-6cff-4bd2-9f60-7837fda05c49",
+   "entityType": "dataSet",
+   "entityId": "c10c8354-db6a-4358-9f5f-42d946365e95",
+   "entityVersion": "0.20",
+   "entityNodeId": "connector",
+   "dependencyType": "connector",
+   "dependencyId": "00d3bd9a-b7f2-4962-b349-14abc6ffcfbb",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-14T06:31:18.62133Z",
+   "updatedAt": "2025-11-14T06:31:32.987814Z"
+  }
+ ]
+}

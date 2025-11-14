@@ -1,0 +1,15 @@
+{
+ "entityType": "connector",
+ "category": "mongodb",
+ "data": {
+  "createdAt": "2025-11-14T06:27:39.504Z",
+  "updatedAt": "2025-11-14T06:28:32.165399Z",
+  "isDeleted": false,
+  "entityId": "00d3bd9a-b7f2-4962-b349-14abc6ffcfbb",
+  "name": "mongodb",
+  "category": "database",
+  "isSource": true,
+  "isAction": true,
+  "isTrigger": true
+ }
+}
