@@ -1,0 +1,227 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-11-14T05:28:36.976Z",
+  "updatedAt": "2025-11-14T06:01:04.536738Z",
+  "isDeleted": false,
+  "testedAt": "2025-11-14T06:01:04.535Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "4658cb53-60ea-45d6-8ac1-519219487cd5",
+  "name": "ruleforMaster",
+  "commitId": "commit-33027d50-4dfd-4c00-894a-8c31e0ef87e1",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-11-14 05:28:36",
+   "timeStamp": "2025-11-14T05:28:36.976951925Z"
+  },
+  "customInput": {
+   "name": {
+    "name": "name",
+    "dataType": "string",
+    "executedValue": "Atul"
+   }
+  },
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+     "firstOutputData": "output_D5lOCJ",
+     "isEnabled": true
+    }
+   },
+   "properties": {
+    "rule_03": {
+     "type": "simpleCondition"
+    }
+   },
+   "results": {
+    "result_D5EAwT": {
+     "nextId": "result_nP0j2G",
+     "prevId": "result_bsnPEj",
+     "dataType": "excelFormula",
+     "keyName": "form"
+    },
+    "result_bsnPEj": {
+     "nextId": "result_D5EAwT",
+     "dataType": "string",
+     "keyName": "Values"
+    },
+    "result_nP0j2G": {
+     "prevId": "result_D5EAwT",
+     "dataType": "list",
+     "keyName": "list"
+    }
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_bsnPEj",
+   "firstAggOutputData": "aggData_name"
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_D5lOCJ": {
+      "name": "Values",
+      "dataType": "string",
+      "value": "Value",
+      "next": "output_APg5NH",
+      "executedValue": "Value"
+     },
+     "output_neWRnc": {
+      "name": "list",
+      "dataType": "list",
+      "returnType": "array",
+      "value": "[1,2,3,4,5]",
+      "executedValue": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "aggData_List": {
+      "name": "List",
+      "dataType": "list",
+      "returnType": "array",
+      "value": "[1,2,3,4,5]",
+      "executedValue": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "aggData_name": {
+      "name": "name",
+      "dataType": "string",
+      "value": "AdditionalData",
+      "next": "aggData_List",
+      "executedValue": "AdditionalData"
+     },
+     "output_APg5NH": {
+      "name": "form",
+      "dataType": "excelFormula",
+      "returnType": "string",
+      "value": "var a=\"Atul\";\na",
+      "next": "output_neWRnc",
+      "executedValue": "Atul"
+     }
+    },
+    "actionNode": {
+     "actionData_action_1": {
+      "name": "action_1",
+      "connectorId": "2467f29b-75ca-49d4-81ea-5393cb6bc85c",
+      "entity": "",
+      "entityId": "",
+      "config": {
+       "queryParams": [],
+       "path": "/posts/2",
+       "query": "",
+       "method": "GET",
+       "headers": [],
+       "settings": {
+        "cache": {
+         "cacheKeys": "",
+         "enabled": false,
+         "duration": {
+          "unit": "d",
+          "value": 0
+         }
+        }
+       }
+      }
+     }
+    },
+    "firstActionNode": "actionData_action_1"
+   },
+   "else": {
+    
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_01": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "rule_02"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_02": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_ehsIm1"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_03": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "siblingIndex": 1
+    },
+    "rhs_ehsIm1": {
+     "value": "Atul",
+     "dataType": "string",
+     "nodeType": "constant",
+     "parent": "rule_02",
+     "siblingIndex": 1
+    }
+   }
+  },
+  "firstCustomInput": "name",
+  "description": "",
+  "policy": "first",
+  "version": "draft",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "settings": {
+   "startAt": "0001-01-01T00:00:00Z",
+   "endAt": "0001-01-01T00:00:00Z",
+   "api": {
+    "isEnabled": true
+   },
+   "isEnabled": true,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": "d"
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  },
+  "isDemo": false,
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-33027d50-4dfd-4c00-894a-8c31e0ef87e1",
+   "entityType": "rule",
+   "entityId": "4658cb53-60ea-45d6-8ac1-519219487cd5",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_action_1",
+   "dependencyType": "connector",
+   "dependencyId": "2467f29b-75ca-49d4-81ea-5393cb6bc85c",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-14T06:00:47.187572Z",
+   "updatedAt": "2025-11-14T06:01:00.643483Z"
+  }
+ ]
+}
